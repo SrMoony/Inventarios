@@ -1,3 +1,7 @@
+<?php
+include_once('./barra_navegacion.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestamos</title>
     <link rel="shortcut icon" href="../imagenes/icono_herramienta.ico">
-    <link rel="stylesheet" href="./estilos/normalize.css">
-    <link rel="stylesheet" href="./estilos/zephyr.css">
+    <link rel="stylesheet" href="../estilos/zephyr.css">
+    <link rel="stylesheet" href="../estilos/normalize.css">
 </head>
 
 <body>
