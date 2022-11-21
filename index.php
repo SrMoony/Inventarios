@@ -10,7 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="shortcut icon" href="./imagenes/icono.ico">
+    <link rel="shortcut icon" href="./imagenes/icono_herramienta.ico">
+    <link rel="stylesheet" href="./estilos/normalize.css">
+    <link rel="stylesheet" href="./estilos/zephyr.css">
+    <link rel="stylesheet" href="./estilos/cabezera.css">
+    <link rel="stylesheet" href="./estilos/login.css">
 </head>
 
 <body>
@@ -19,7 +23,13 @@
     </header>
 
     <main class="main">
-        esto deberia funcinar
+        <form action="validar.php" method="POST">
+            <img src="./imagenes/insunte_logo_corto.png" alt="">
+            <h1 style="color: white; text-shadow: black 0.1em 0.1em 0.2em">Bienvenido al sistema de prestamos</h1>
+            <p>Usuario <input type="text" placeholder="Ingrese su nombre de usuario" name="usuario"></p>
+            <p>Contraseña <input type="Password" placeholder="Ingrese su contraseña" name="contraseña"></p>
+            <button type="submit" value="Ingresar" class="btn btn-primary">ingresar</button>
+        </form>
     </main>
 
     <footer class="footer">
