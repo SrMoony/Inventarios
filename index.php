@@ -18,23 +18,15 @@
 </head>
 
 <body>
-    <header class="header">
-
-    </header>
-
     <main class="main">
         <form action="validar.php" method="POST">
             <img src="./imagenes/insunte_logo_corto.png" alt="">
             <h1 style="color: white; text-shadow: black 0.1em 0.1em 0.2em">Bienvenido al sistema de prestamos</h1>
-            <p>Usuario <input type="text" placeholder="Ingrese su nombre de usuario" name="usuario"></p>
-            <p>Contraseña <input type="Password" placeholder="Ingrese su contraseña" name="contraseña"></p>
+            <p>Usuario <input autocomplete="off" type="text" placeholder="Ingrese su nombre de usuario" name="usuario"></p>
+            <p>Contraseña <input autocomplete="off" value=" " id="contra" onload="vaciar()" type="Password" placeholder="Ingrese su contraseña" name="contraseña"></p> 
             <button type="submit" value="Ingresar" class="btn btn-primary">ingresar</button>
         </form>
     </main>
-
-    <footer class="footer">
-
-    </footer>
 </body>
 
 </html>
