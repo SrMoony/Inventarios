@@ -20,7 +20,7 @@ $query2 = mysqli_query($con, $sql2);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro de alumnos</title>
+    <title>registro de Clientes</title>
     <link rel="shortcut icon" href="../imagenes/icono_herramienta.ico">
     <link rel="stylesheet" href="../estilos/zephyr.css">
     <link rel="stylesheet" href="../estilos/normalize.css">
@@ -32,7 +32,7 @@ $query2 = mysqli_query($con, $sql2);
         <div class="row">
 
             <div class="col-md-3">
-                <h1>Ingrese los datos del alumno</h1>
+                <h1>Ingrese los datos del nuevo cliente</h1>
                 <form action="insertar.php" method="POST">
                     <input type="text" class="form-control mb-3" name="numControl" placeholder="Numero de control">
                     <select aria-label="carrera" class="form-select text center mb-3" name="carrera" id="carrera">
@@ -54,7 +54,7 @@ $query2 = mysqli_query($con, $sql2);
                             <th>Numero de control</th>
                             <th>Nombres</th>
                             <th>pellidos</th>
-                            <th>carrera</th>
+                            <th>Empleo</th>
                             <th></th>
                             <th></th>
                         </tr>

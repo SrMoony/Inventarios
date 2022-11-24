@@ -15,3 +15,5 @@ if ($query) {
     Header("Location: v_levantamiento.php");
 } else {
 }
+
+$sql = " ";

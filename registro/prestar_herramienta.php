@@ -18,13 +18,11 @@ $cantidadActual = intval($herramienta["cantidad"]);
 $cantidTotal = intval($herramienta["max"]);
 
 
-// $res = " ";
-
-// for ($i = 1; $i <= $cantidad; $i++) {
-//     $res .= "<option value=" . "{$i}" . ">" . "{$i}" . "</option>";
-// }
-
-// var_dump($cantidad);
+$res = " ";
+for ($i = 1; $i <= $cantidadActual; $i++) {
+    $res .= "<option value= '$i'>$i</option>";
+}
+// print(htmlspecialchars($res));
 // die;
 
 ?>
@@ -56,18 +54,20 @@ $cantidTotal = intval($herramienta["max"]);
                     <option value="<?php echo $alumnos['numControl'] ?>"><?php echo $alumnos['nombres'] . " " . $alumnos['apellidos'] ?></option>
                 <?php endforeach ?>
             </select>
-            
+
             <!-- ----------------------------Este es el apartado para insertar la cantidad-------------------------------------- -->
             <h3><small class="text-muted">cantidad: (actualmente hay <?php echo $cantidadActual ?> de <?php echo $cantidTotal ?>)</small></h3>
-            <input type="numeric" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" class="form-control mb-3" name="cantidad" placeholder="cantidad">
-
+            <!-- <input type="hidden" name="cantidadTotal" id="cantidadTotal" value="<?php echo $cantidTotal ?>"> -->
+            <select aria-label="cantidad" class="form-select text center mb-3" name="cantidad" id="cantidad">
+                <?php echo $res ?>
+            </select>
             <!-- ----------------------------Este es el apartado para insertar al encargado-------------------------------------- -->
             <h3><small class=" text-muted">Fue prestada por: </small></h3>
             <select aria-label="encargado" class="form-select text center mb-3" name="encargado" id="encargado">
                 <?php foreach ($usuario as $usuarios) : ?>
                     <option value="<?php echo $usuarios['idusuario'] ?>"><?php echo $usuarios['nombre'] . " " . $usuarios['apellido'] ?></option>
                 <?php endforeach ?>
-            </select> 
+            </select>
 
             <input type="submit" class="btn btn-primary btn-block" value="Prestar">
         </form>

@@ -1,5 +1,6 @@
 <?php
 include_once("../conexion.php");
+date_default_timezone_set('America/Mexico_City');
 $con = conectar();
 
 $cantidad = $_POST['cantidad'];
@@ -11,18 +12,15 @@ $idUsuario = $_POST['encargado'];
 function autoincremental($con)
 {
     try {
-        $auto = "SELECT p.idPrestamo
-        FROM prestamos p 
-        LIMIT 1 
-        ORDER BY p.idPrestamo DESC";
+        $sql = "SELECT p.idPrestamo
+        FROM prestamos p  
+        ORDER BY p.idPrestamo DESC
+        LIMIT 1";
+        $query = mysqli_query($con, $sql);
+        $herramienta = mysqli_fetch_array($query);
+        $cant = intval($herramienta["idPrestamo"]) + 1;
 
-        $response  = $con->query($auto);
-
-        if (count($response) < 1) {
-            return 1;
-        } else {
-            return intval($response[0]["idPrestamo"]) + 1;
-        }
+        return $cant;
     } catch (\Throwable $th) {
         http_response_code(400);
         echo $th;
@@ -47,14 +45,16 @@ function ActualizarCantidad($con, $cantidad, $idHerramienta)
 
 $auto = autoincremental($con);
 ActualizarCantidad($con, $cantidad, $idHerramienta);
-$fecha = date("Y-m-d");
+$fecha = date('Y-m-d');
 $sql = "INSERT INTO prestamos VALUES
-'$auto',-- idPrestamo  
-'$numControl',-- numControl  
-'$idHerramienta',-- idHerramienta  
-'$fecha',-- fecha 
-'$idUsuario'-- idusuario 
-";
+('$auto',
+'$numControl',
+'$idHerramienta',
+'$cantidad', 
+'$fecha',
+'$idUsuario',
+0
+);";
 
 $query = mysqli_query($con, $sql);
 
