@@ -29,10 +29,10 @@ $query = mysqli_query($con, $sql);
                 <h1>Ingrese una nueva herramienta</h1>
                 <form action="insertar.php" method="POST">
 
-                    <input type="text" class="form-control mb-3" name="codigo" placeholder="codigo">
+                    <input type="numeric" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" class="form-control mb-3" name="codigo" placeholder="codigo">
                     <input type="text" class="form-control mb-3" name="herramienta" placeholder="herramienta">
-                    <input type="text" class="form-control mb-3" name="cantidad" placeholder="cantidad">
-                    <input type="text" class="form-control mb-3" name="total" placeholder="total">
+                    <input type="numeric" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" class="form-control mb-3" name="cantidad" placeholder="cantidad">
+                    <input type="numeric" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" class="form-control mb-3" name="total" placeholder="total">
 
                     <input type="submit" class="btn btn-primary">
                 </form>

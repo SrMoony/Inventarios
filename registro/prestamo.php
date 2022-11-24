@@ -22,21 +22,23 @@ include_once("./barra_navegacion.php");
     </header>
 
     <body>
-        <h3>Alumnos con prestamos activos</h3>
-        <div class="col-md-8">
+        <h3>Clientes con prestamos activos</h3>
+        <div class="col-md-12">
             <table class="table">
                 <thead class="table-danger table-striped">
                     <tr>
                         <th>numero Control</th>
                         <th>alumno</th>
                         <th>Herramienta prestada</th>
+                        <th>cantidad</th>
                         <th>fecha del prestamo</th>
                         <th>prestamista</th>
+                        <th>accion</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
-                <a type="button" class="btn btn-warning" href="../alumno/alumnos.php">Resgistrar a un alumno</a>
+                <a type="button" class="btn btn-warning" href="../alumno/alumnos.php">Resgistrar un nuevo cliente</a>
         </div>
     </body>
 </body>

@@ -82,6 +82,7 @@ create table prestamos (
     idPrestamo varchar (5) primary key not null,
     numControl varchar (10) not null,
     idHerramienta numeric (4) not null,
+    cantidad numeric(4),
     fecha date,
     idusuario numeric(3)  not null
 );

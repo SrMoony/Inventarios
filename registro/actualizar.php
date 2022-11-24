@@ -1,7 +1,7 @@
 <?php
 include("../conexion.php");
 include_once("../registro/barra_navegacion.php");
-$con = conectar(); 
+$con = conectar();
 $codigo = $_GET['id'];
 
 $sql = "SELECT * FROM herramientas WHERE idHerramienta='$codigo'";
