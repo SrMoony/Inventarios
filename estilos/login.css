@@ -53,7 +53,7 @@ input {
 }
 
 body {
-    background-image: url(../imagenes/insunte_Universidad.JPG);
+    background-image: url(../imagenes/fondo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -117,7 +117,7 @@ header a {
 }
 
 .login-box {
-    background-image: url(../imagenes/insunte_Universidad.JPG);
+    background-image: url(../imagenes/fondo.png);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -146,7 +146,7 @@ header a {
     }
 
     body {
-        background-image: url(../imagenes/insunte_Universidad.JPG);
+        background-image: url(../imagenes/fondo.png);
         max-width: 100%;
         max-height: 200%;
         background-attachment: fixed;
@@ -177,7 +177,7 @@ header a {
     }
 
     body {
-        background-image: url(../imagenes/insunte_Universidad.JPG);
+        background-image: url(../imagenes/fondo.png);
         max-width: 100%;
         max-height: 200%;
         background-attachment: fixed;
@@ -208,7 +208,7 @@ header a {
     }
 
     body {
-        background-image: url(../imagenes/insunte_Universidad.JPG);
+        background-image: url(../imagenes/fondo.png);
         max-width: 100%;
         max-height: 200%;
         background-attachment: fixed;

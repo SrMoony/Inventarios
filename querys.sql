@@ -78,14 +78,19 @@ insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) valu
 insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('4d-dd', 16,'Phoenix','Wright',0);
 
 -- ---------------------tabla de prestamos -------------------------------
-create table prestamos (
-    idPrestamo varchar (5) primary key not null,
-    numControl varchar (10) not null,
-    idHerramienta numeric (4) not null,
-    cantidad numeric(4),
-    fecha date,
-    idusuario numeric(3)  not null
-);
+CREATE TABLE `prestamos` (
+  `idPrestamo` integer(5) NOT NULL,
+  `numControl` varchar(10) NOT NULL,
+  `idHerramienta` decimal(4,0) NOT NULL,
+  `cantidad` decimal(4,0) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `idusuario` decimal(3,0) NOT NULL,
+  `status` decimal(1,0) NOT NULL,
+  PRIMARY KEY (`idPrestamo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE inventarios.prestamos MODIFY COLUMN idPrestamo int(5) auto_increment NOT NULL;
+
 
 select al.numControl, concat(al.nombres, " ", al.apellidos) as alumno, h.herramienta, p.fecha, concat(u.nombre, " ", u.apellido) as prestamista  
 from prestamos p 
