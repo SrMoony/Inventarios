@@ -48,7 +48,7 @@ for ($i = 1; $i <= $cantidadActual; $i++) {
             <h3><small class="text-muted">se realizara el prestamo de: </small><?php echo $herramienta['herramienta'] ?></h3>
             <br><br>
             <!-- ----------------------------Este es el apartado para insertar al cliente---------------------------------- -->
-            <h3><small class="text-muted">al cliente: </small></h3>
+            <h3><small class="text-muted">al empleado: </small></h3>
             <select aria-label="cliente" class="form-select text center mb-3" name="cliente" id="cliente">
                 <?php foreach ($alumno as $alumnos) : ?>
                     <option value="<?php echo $alumnos['numControl'] ?>"><?php echo $alumnos['nombres'] . " " . $alumnos['apellidos'] ?></option>

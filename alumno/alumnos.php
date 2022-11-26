@@ -32,7 +32,7 @@ $query2 = mysqli_query($con, $sql2);
         <div class="row">
 
             <div class="col-md-3">
-                <h1>Ingrese los datos del nuevo cliente</h1>
+                <h1>Ingrese los datos del nuevo Empleado</h1>
                 <form action="insertar.php" method="POST">
                     <input type="text" class="form-control mb-3" name="numControl" placeholder="Numero de control">
                     <select aria-label="carrera" class="form-select text center mb-3" name="carrera" id="carrera">
@@ -53,8 +53,8 @@ $query2 = mysqli_query($con, $sql2);
                         <tr>
                             <th>Numero de control</th>
                             <th>Nombres</th>
-                            <th>pellidos</th>
-                            <th>Empleo</th>
+                            <th>Apellidos</th>
+                            <th>Area</th>
                             <th></th>
                             <th></th>
                         </tr>
