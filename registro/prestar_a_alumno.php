@@ -4,7 +4,7 @@ date_default_timezone_set('America/Mexico_City');
 $con = conectar();
 
 $cantidad = $_POST['cantidad'];
-$numControl = $_POST['cliente'];
+$numControl = $_POST['empleado'];
 $idHerramienta = $_POST['idHerramienta'];
 $idUsuario = $_POST['encargado'];
 

@@ -20,7 +20,7 @@ $query2 = mysqli_query($con, $sql2);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro de Clientes</title>
+    <title>registro de empleados</title>
     <link rel="shortcut icon" href="../imagenes/icono_herramienta.ico">
     <link rel="stylesheet" href="../estilos/zephyr.css">
     <link rel="stylesheet" href="../estilos/normalize.css">

@@ -1,3 +1,5 @@
+create database inventarios;
+
 -- --------------------creacion de las tablas de login-----------------------
 create table usuarios  (
     idusuario numeric(3) primary key not null,
@@ -8,9 +10,10 @@ create table usuarios  (
     administrador numeric(1) not null
 );
 
-insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (99,'admin','admin',"usuario","administrador",1 ); 
-insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (98,'Hermit','purple',"Joseph","Joestar",1 ); 
-insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (97,'Star','Platinum',"Jotaro","Kujo" ,1 ); 
+insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (1,'admin','admin',"usuario","administrador",1 ); 
+insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (2,'irays','admin',"Irays","Araiza",1 ); 
+insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (3,'Sol','admin',"Marisol","estrada" ,1 ); 
+insert into usuarios (idusuario, usuario, contraseña, nombre, apellido, administrador) values (4,'Mario','admin',"Mario","Garcia" ,1 ); 
 
 -- --------------------creacion de las tablas de herramientas-----------------------
 
@@ -47,22 +50,8 @@ create table carreras (
     carrera varchar(40) not null 
 );
 
-insert into carreras (idCarrera, carrera) values (1, 'preparatoria');
-insert into carreras (idCarrera, carrera) values (2, 'administracion de empresas');
-insert into carreras (idCarrera, carrera) values (3, 'Arquitectura');
-insert into carreras (idCarrera, carrera) values (4, 'Ciencias de la comunicacion');
-insert into carreras (idCarrera, carrera) values (5, 'Contaduria publica');
-insert into carreras (idCarrera, carrera) values (6, 'Criminologia');
-insert into carreras (idCarrera, carrera) values (7, 'Derecho');
-insert into carreras (idCarrera, carrera) values (8, 'Negocios internacionales');
-insert into carreras (idCarrera, carrera) values (9, 'Psicologia Humanista');
-insert into carreras (idCarrera, carrera) values (10, 'Industrial administrador');
-insert into carreras (idCarrera, carrera) values (11, 'industrial en manufactura');
-insert into carreras (idCarrera, carrera) values (12, 'Industrial y de sistemas');
-insert into carreras (idCarrera, carrera) values (13, 'Direccion y gestion educativa');
-insert into carreras (idCarrera, carrera) values (14, 'Finanzas y negocios internacionales');
-insert into carreras (idCarrera, carrera) values (15, 'Ingenieria en sistemas y optimización');
-insert into carreras (idCarrera, carrera) values (16, 'Litigacion'); 
+insert into carreras (idCarrera, carrera) values (1, 'Produccion');
+insert into carreras (idCarrera, carrera) values (2, 'Almacen');  
 
 create table alumnos (
     numControl varchar (10)primary key not null,
@@ -72,10 +61,10 @@ create table alumnos (
     DeudoresSiNo numeric (1) not null
 );
 
-insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('1a-aa', 12,'David','Gil',0);
-insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('2b-bb', 15,'Constance','Nouvelle',0);
-insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('3c-cc', 6,'Barry','Allen',0);
-insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('4d-dd', 16,'Phoenix','Wright',0);
+insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('1a-aa', 1,'David','Gil',0);
+insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('2b-bb', 1,'Constance','Nouvelle',0);
+insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('3c-cc', 2,'Barry','Allen',0);
+insert into alumnos (numControl, carrera, nombres, apellidos, DeudoresSiNo) values ('4d-dd', 2,'Phoenix','Wright',0);
 
 -- ---------------------tabla de prestamos -------------------------------
 CREATE TABLE `prestamos` (
